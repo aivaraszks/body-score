@@ -1,0 +1,31 @@
+.button-group button:is(:first-child) {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.button-group button:is(:last-child) {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.button-group button:not(:last-child) {
+  border-right: none;
+}
+
+.group-button {
+  background-color: #fff;
+  border: 1px solid #000000;
+  color: #000000;
+  cursor: pointer;
+  float: left;
+  padding: 8px 24px;
+}
+
+.group-button:focus {
+  outline: none;
+}
+
+.button-selected {
+  background-color: #333333;
+  color: #ffffff;
+}

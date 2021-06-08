@@ -1,0 +1,33 @@
+<div *ngIf="selectedUserMeasurements" class="score-card-container">
+  <div class="score-card-header">Body Score</div>
+
+  <div class="score-card-circle-container">
+    <div class="circle-outer">
+      <div class="circle-inner">
+        <div class="circle-content">
+          <div class="score-trend">
+            <div
+              class="score-trend-icon"
+              [ngClass]="{ 'icon-up': selectedUserMeasurements.bodyScore.trend === 'Up', 'icon-down': selectedUserMeasurements.bodyScore.trend === 'Down' }"
+            ></div>
+          </div>
+          <div class="score-value">
+            {{ selectedUserMeasurements.bodyScore.value }}
+          </div>
+          <div class="score-label">POINTS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="score-card-footer">
+    <div class="footer-item">
+      <div class="footer-item-name">Muscle Score:</div>
+      <div class="footer-item-value">{{ selectedUserMeasurements.muscleScore.value }} pts</div>
+    </div>
+    <div class="footer-item">
+      <div class="footer-item-name">Fat Score:</div>
+      <div class="footer-item-value">{{ selectedUserMeasurements.fatScore.value }} pts</div>
+    </div>
+  </div>
+</div>

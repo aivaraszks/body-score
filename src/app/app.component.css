@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container > * {
+  flex: 2 100%;
+  padding: 15px;
+}

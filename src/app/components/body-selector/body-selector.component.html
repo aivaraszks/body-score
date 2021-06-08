@@ -1,0 +1,12 @@
+<div *ngIf="scoreState$ | async as data">
+  <div class="button-group">
+    <button
+      *ngFor="let user of data.users; let i = index"
+      (click)="selectUser(user.id)"
+      class="group-button"
+      [ngClass]="{ 'button-selected': data.selectedUserId === user.id }"
+    >
+      {{ user.name }}
+    </button>
+  </div>
+</div>
